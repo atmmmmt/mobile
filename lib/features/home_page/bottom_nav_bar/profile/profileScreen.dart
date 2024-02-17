@@ -20,8 +20,30 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: lightColorScheme.onPrimary,
+      appBar: AppBar(
+        elevation: 3,
+        backgroundColor:lightColorScheme.onPrimary,
+        leading : Transform.scale(
+            scale: 2.3,
+            child: Image.asset(Images.logo2)),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("مرحبا_عمر",style:Theme.of(context).textTheme.titleMedium ,),
+            Text("بكالوربا_علمي",style:Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 13) ,),
+          ],
+        ),
+        actions: [
+          GestureDetector(
+            onTap: (){},
+            child: Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: SvgPicture.asset(Images.appBarIcon)),
+          ),
+
+        ],
+      ),
+      backgroundColor: lightColorScheme.background,
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 7,horizontal: 15),
         child: Column(

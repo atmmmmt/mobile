@@ -19,6 +19,8 @@ class VerityWay extends StatelessWidget {
     return Scaffold(
       backgroundColor: lightColorScheme.primary,
       appBar: AppBar(
+        elevation: 3,
+
         title: Text("طريقة التفعيل",style: Theme.of(context).textTheme.titleMedium),
         actions: [
           GestureDetector(

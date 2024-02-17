@@ -17,7 +17,7 @@ class About extends StatelessWidget {
     return Scaffold(
       backgroundColor: lightColorScheme.primary,
       appBar: AppBar(
-        elevation: 3,
+        elevation: 3.5,
             title: Text("حول التطبيق",style: Theme.of(context).textTheme.titleMedium),
             actions: [
             GestureDetector(
