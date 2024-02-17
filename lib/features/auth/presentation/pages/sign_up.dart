@@ -21,87 +21,87 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController confirmPassword = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: ListView(
-      children: [
-        Column(
-          children: [
-
-            Stack(
-                children: [Container(
+    return Scaffold(
+      body: ListView(
+        children: [
+          Column(
+            children: [
+              Stack(
+                clipBehavior: Clip.none,
+                  children: [
+                Container(
                     margin: REdgeInsets.only(left: 200),
-                    child: SvgPicture.asset(Images.createAccount,
+                    child: SvgPicture.asset(
+                      Images.createAccount,
                       height: 250,
                       width: 200,
                     )),
-                  Positioned(
-                      bottom: -12,
-                      right: 260,
-                      child: SvgPicture.asset(Images.loginGirlStack)),
-                ]  ),
-
-
-            Container(
-              alignment: Alignment.center,
-              width: 370.w,
-              height: 300.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                border: Border.all(
-                    width: 2,
-                    color: lightColorScheme.outline),
+                Positioned(
+                    bottom: -12,
+                    right: 260,
+                    child: SvgPicture.asset(Images.loginGirlStack)),
+              ]),
+              Container(
+                alignment: Alignment.center,
+                width: 370.w,
+                height: 300.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  border: Border.all(width: 2, color: lightColorScheme.outline),
+                ),
+                child: Column(
+                  children: [
+                    UserNameField(controller: userName),
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    PhoneField(controller: phone),
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    PasswordField(controller: password),
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    PasswordField(controller: confirmPassword)
+                  ],
+                ),
               ),
-              child: Column(
+              SizedBox(
+                height: 20.h,
+              ),
+              Container(
+                  margin: REdgeInsets.only(right: 40), child: SelectGender()),
+              SizedBox(
+                height: 20.h,
+              ),
+              MainButtonInActive(
+                text: 'تسجيل الدخول',
+                onPressed: () {},
+              ),
+              SizedBox(
+                height: 70.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  UserNameField(controller: userName),
-                  SizedBox(
-                    height: 5.h,
+                  SubButtonLight(
+                    text: "تسجيل الدخول",
+                    onPressed: () {},
                   ),
-                  PhoneField(controller: phone),
                   SizedBox(
-                    height: 5.h,
+                    width: 30.w,
                   ),
-                  PasswordField(controller: password),
-                  SizedBox(
-                    height: 5.h,
+                  SubButtonDark(
+                    text: "انشاء حساب",
+                    onPressed: () {},
                   ),
-                  PasswordField(controller: confirmPassword)
-
                 ],
-              ),
-            ),
-          SizedBox(height: 50.h,),
-          Container(
-            margin: REdgeInsets.only(right: 40),
-              child: SelectGender()),
-            SizedBox(
-              height: 20.h,
-            ),
-            const MainButton(
-              text: 'تسجيل الدخول',
-            ),
-            SizedBox(
-              height: 70.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SubButtonLight(
-                  text: "تسجيل الدخول",
-                  onPressed: () {},
-                ),
-                SizedBox(
-                  width: 15.w,
-                ),
-                SubButtonDark(
-                  text: "انشاء حساب",
-                  onPressed: () {},
-                ),
-              ],
-            )
-          ],
-        ),
-      ],
-    ),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
