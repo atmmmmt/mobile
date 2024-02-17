@@ -41,8 +41,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 ]  ),
               Container(
                 alignment: Alignment.center,
-                width: 350.w,
-                height: 155.h,
+                width: 370.w,
+                height: 152.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   border: Border.all(
@@ -60,12 +60,12 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               TextButton(
-                  onPressed: () {}, child: Text("] نسيت كلمة المرور ؟")),
+                  onPressed: () {}, child: Text(" نسيت كلمة المرور ؟",style: Theme.of(context).textTheme.titleSmall)),
               SizedBox(
                 height: 20.h,
               ),
-              const MainButton(
-                text: 'تسجيل الدخول',
+               MainButton(
+                text: 'تسجيل الدخول', onPressed: () {  },
               ),
               SizedBox(
                 height: 70.h,

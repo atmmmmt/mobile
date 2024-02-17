@@ -119,12 +119,43 @@ class _PasswordFieldState extends State<PasswordField> {
             });
           },
         ),
-        contentPadding: REdgeInsets.only(right: 20.0,),
+        contentPadding: REdgeInsets.only(
+          right: 20.0,
+        ),
       ),
       keyboardType: TextInputType.visiblePassword,
       validator: _passValidation,
       controller: widget.controller,
       obscureText: !passwordVisible!,
+    );
+  }
+}
+class QrCodeInput extends StatelessWidget {
+  const QrCodeInput({Key? key, required this.controller}) : super(key: key);
+  final TextEditingController controller;
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: TextFormField(
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          label: Text(
+            "كود التفعيل",
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          contentPadding: REdgeInsets.all( 10.0),
+        ),
+        keyboardType: TextInputType.text,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return "قم بادخال الكود";
+          }
+          return null;
+        },
+        controller: controller,
+        obscureText: false,
+      ),
     );
   }
 }
@@ -147,7 +178,9 @@ class _SelectGenderState extends State<SelectGender> {
           Row(
             children: [
               Text("الجنس:", style: Theme.of(context).textTheme.titleSmall),
-              SizedBox(width: 15.w,),
+              SizedBox(
+                width: 15.w,
+              ),
               Expanded(
                 child: RadioListTile(
                     title: Text(
@@ -156,6 +189,8 @@ class _SelectGenderState extends State<SelectGender> {
                     ),
                     value: "أنثى",
                     groupValue: gender,
+                    hoverColor: lightColorScheme.primary,
+
                     onChanged: (value) {
                       setState(() {
                         gender = value!;
@@ -170,6 +205,7 @@ class _SelectGenderState extends State<SelectGender> {
                     ),
                     value: "ذكر",
                     activeColor: lightColorScheme.primary,
+                    hoverColor: lightColorScheme.primary,
                     groupValue: gender,
                     onChanged: (value) {
                       setState(() {

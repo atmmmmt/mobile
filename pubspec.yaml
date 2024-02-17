@@ -48,6 +48,8 @@ dependencies:
   intl: ^0.18.1
   logger: ^2.0.2+1
   flutter_svg: ^2.0.9
+#  flutter_chat_ui: ^1.6.12
+#  qr_code_scanner: ^1.0.1
 
 dev_dependencies:
   flutter_test:
