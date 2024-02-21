@@ -29,7 +29,7 @@ class SettingsScreen extends StatelessWidget {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("مرحبا_عمر",style:Theme.of(context).textTheme.titleMedium ,),
+            Text("مرحبا_عمر",style:Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 16) ,),
             Text("بكالوربا_علمي",style:Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 13) ,),
           ],
         ),

@@ -28,6 +28,7 @@ class Images {
       'assets/images/question_boy_way_verity.svg';
   static const String scienceBoy = 'assets/images/science_boy.svg';
   static const String telegram = 'assets/images/telegram.svg';
+  static const String test = 'assets/images/test.png';
   static const String verityCodeGirl = 'assets/images/verity_code_girl.svg';
   static const String verityCodeMobile = 'assets/images/verity_code_mobile.svg';
   static const String wlcLogin = 'assets/images/wlc_login.svg';

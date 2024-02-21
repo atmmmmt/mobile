@@ -1,5 +1,4 @@
 
-
 import 'package:atmtha_mobile/core/app_theme/colors.dart';
 import 'package:atmtha_mobile/core/widgets/verity_way_card.dart';
 import 'package:atmtha_mobile/resources/resources.dart';
@@ -7,12 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 class VerityWay extends StatelessWidget {
   const VerityWay({Key? key}) : super(key: key);
   static String name = "verity_way_screen";
   static String path = "/verity_way_screen";
-
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +17,6 @@ class VerityWay extends StatelessWidget {
       backgroundColor: lightColorScheme.primary,
       appBar: AppBar(
         elevation: 3,
-
         title: Text("طريقة التفعيل",style: Theme.of(context).textTheme.titleMedium),
         actions: [
           GestureDetector(
@@ -40,7 +36,9 @@ class VerityWay extends StatelessWidget {
             children: [
              Align(
                alignment: Alignment.topRight,
-                 child: Text("أول تفعيل لك ؟ ",style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),)),
+                 child: Container(
+                   margin: EdgeInsets.only(right: 20.w),
+                     child: Text("أول تفعيل لك ؟ ",style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),))),
               SizedBox(height: 13.h,),
               Align(
                   alignment: Alignment.topRight,

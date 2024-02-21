@@ -6,7 +6,8 @@ import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/add_exam/add_exa
 import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profileScreen.dart';
 import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/favourite.dart';
 import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_codes.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile.dart';
+import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile/edit_user_profile.dart';
+import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile/my_profile_screen/my_profile.dart';
 import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/contact_us.dart';
 import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/sell_centers.dart';
 import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/settings_screen.dart';
@@ -99,6 +100,11 @@ final GoRouter router = GoRouter(
         path: MyProfile.path,
         name: MyProfile.name,
         builder: (context, state) => MyProfile(),
+      ),
+      GoRoute(
+        path: EditUserProfile.path,
+        name: EditUserProfile.name,
+        builder: (context, state) => EditUserProfile(),
       ),
      // StatefulShellRoute.indexedStack(
      //      builder: (context, state, navigationShell) =>

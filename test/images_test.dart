@@ -29,6 +29,7 @@ void main() {
     expect(File(Images.questionBoyWayVerity).existsSync(), isTrue);
     expect(File(Images.scienceBoy).existsSync(), isTrue);
     expect(File(Images.telegram).existsSync(), isTrue);
+    expect(File(Images.test).existsSync(), isTrue);
     expect(File(Images.verityCodeGirl).existsSync(), isTrue);
     expect(File(Images.verityCodeMobile).existsSync(), isTrue);
     expect(File(Images.wlcLogin).existsSync(), isTrue);
