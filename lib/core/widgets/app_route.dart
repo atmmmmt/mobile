@@ -1,23 +1,24 @@
 import 'package:atmtha_mobile/features/auth/presentation/pages/sign_in.dart';
 import 'package:atmtha_mobile/features/auth/presentation/pages/sign_up.dart';
 import 'package:atmtha_mobile/features/auth/presentation/widgets/textfield_inputs.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/Home/home.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/add_exam/add_exam_screen.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profileScreen.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/favourite.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_codes.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile/edit_user_profile.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile/my_profile_screen/my_profile.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/contact_us.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/sell_centers.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/settings_screen.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/verify_code.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/verify_way.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/home_page/bottom_nav_bar/navbar.dart';
-import '../../features/home_page/bottom_nav_bar/settings/about.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/Home/home.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/add_exam/add_exam_screen.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/navbar.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/profile/profileScreen.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/profile/profile_home_page/favourite.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/profile/profile_home_page/my_codes.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/profile/profile_home_page/my_profile/edit_user_profile.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/profile/profile_home_page/my_profile/my_profile_screen/my_profile.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/settings/about.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/settings/contact_us.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/settings/sell_centers.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/settings/settings_screen.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/settings/verify_code.dart';
+import '../../features/home/presentation/pages/bottom_nav_bar/settings/verify_way.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');

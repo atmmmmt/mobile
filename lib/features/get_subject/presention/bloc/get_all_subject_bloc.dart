@@ -1,18 +1,14 @@
 import 'dart:async';
 import 'dart:ffi';
-
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
-
 import '../../../../core/error/failure.dart';
 import '../../../../core/strings/messeges.dart';
 import '../../domain/entites/get_subject_entites.dart';
 import '../../domain/use_cases/get_all_subject.dart';
-
 part 'get_all_subject_event.dart';
-
 part 'get_all_subject_state.dart';
 
 class GetAllSubjectBloc extends Bloc<GetAllSubjectEvent, GetAllSubjectState> {
@@ -20,7 +16,7 @@ class GetAllSubjectBloc extends Bloc<GetAllSubjectEvent, GetAllSubjectState> {
 
   GetAllSubjectBloc({required this.getAllSubjects})
       : super(GetAllSubjectInitial()) {
-    on<GetAllSubjectEvent>((event, emit) async {
+     on<GetAllSubjectEvent>((event, emit) async {
       if (event is GetAllSubject) {
         emit(LoadingGetAllSubjectState());
         final subjects = await getAllSubjects();

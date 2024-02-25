@@ -1,12 +1,14 @@
 import 'package:atmtha_mobile/core/app_theme/colors.dart';
 import 'package:atmtha_mobile/features/auth/presentation/pages/sign_in.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/Home/home.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/add_exam/add_exam_screen.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profileScreen.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/settings_screen.dart';
+import 'package:atmtha_mobile/features/home/presentation/pages/bottom_nav_bar/profile/profileScreen.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
+import 'Home/home.dart';
+import 'add_exam/add_exam_screen.dart';
+import 'settings/settings_screen.dart';
 
 class NavBarScreen extends StatefulWidget {
   const NavBarScreen({Key? key}) : super(key: key);

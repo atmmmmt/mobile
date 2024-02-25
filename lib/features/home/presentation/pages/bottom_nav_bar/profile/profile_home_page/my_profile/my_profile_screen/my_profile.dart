@@ -1,13 +1,14 @@
 import 'package:atmtha_mobile/core/app_theme/colors.dart';
 import 'package:atmtha_mobile/core/widgets/card_display_my_information.dart';
 import 'package:atmtha_mobile/core/widgets/profile_card.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile/edit_user_profile.dart';
 import 'package:atmtha_mobile/resources/resources.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../edit_user_profile.dart';
 
 class MyProfile extends StatelessWidget {
   const MyProfile({Key? key}) : super(key: key);

@@ -1,14 +1,15 @@
 
 import 'package:atmtha_mobile/core/app_theme/colors.dart';
 import 'package:atmtha_mobile/core/widgets/profile_card.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/favourite.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_codes.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/profile/profile_home_page/my_profile/my_profile_screen/my_profile.dart';
 import 'package:atmtha_mobile/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
+import 'profile_home_page/favourite.dart';
+import 'profile_home_page/my_codes.dart';
+import 'profile_home_page/my_profile/my_profile_screen/my_profile.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);

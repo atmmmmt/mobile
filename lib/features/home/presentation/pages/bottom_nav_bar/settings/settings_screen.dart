@@ -1,15 +1,17 @@
 import 'package:atmtha_mobile/core/app_theme/colors.dart';
 import 'package:atmtha_mobile/core/widgets/profile_card.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/about.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/contact_us.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/sell_centers.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/verify_code.dart';
-import 'package:atmtha_mobile/features/home_page/bottom_nav_bar/settings/verify_way.dart';
+
 import 'package:atmtha_mobile/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
+import 'about.dart';
+import 'contact_us.dart';
+import 'sell_centers.dart';
+import 'verify_code.dart';
+import 'verify_way.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);

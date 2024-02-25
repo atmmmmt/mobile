@@ -12,10 +12,10 @@ abstract class LocalDataSource {
   Future<Unit> cache(List<GetAllSubjectModel> getAllSubjectModel);
 }
 
-class LocalDataSourceImp implements LocalDataSource {
+class SubLocalDataSourceImp implements LocalDataSource {
   final SharedPreferences sharedPreferences;
 
-  LocalDataSourceImp({required this.sharedPreferences});
+  SubLocalDataSourceImp({required this.sharedPreferences});
 
   @override
   Future<Unit> cache(List<GetAllSubjectModel> getAllSubjectModel) {
