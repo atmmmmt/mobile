@@ -8,8 +8,20 @@ class SignIn {
 
   SignIn(this.authRepository);
 
-  Future<Either<Failure, String>> call() async {
-    return await authRepository.signIn();
+  Future<Either<Failure, String>> call(SignInParams signInParams) async {
+    return await authRepository.signIn(signInParams);
   }
 
+}
+class SignInParams {
+  final String phoneNumber;
+  final String password;
+  SignInParams(
+      {required this.phoneNumber,
+        required this.password,
+        });
+  Map<String, dynamic> get map => {
+    "phoneNumber": phoneNumber,
+    "password": password,
+  };
 }

@@ -21,7 +21,7 @@ class IAuthRepository implements AuthRepository {
       required this.authLocalDataSource});
 
   @override
-  Future<Either<Failure, String>> signIn() async {
+  Future<Either<Failure, String>> signIn(signInParams) async {
     return await _getMessage((params) {
       return authRemoteDataSource.signIn();
     });
