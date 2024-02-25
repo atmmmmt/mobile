@@ -13,9 +13,13 @@ ThemeData lightTheme(BuildContext context) => ThemeData(
       textTheme: TextTheme(
         displayLarge: Theme.of(context).textTheme.displayLarge?.copyWith(
               fontSize: FontSize.displayLarge,
+          fontFamily: "Tajawal-Regular",
+          color: lightColorScheme.background,
             ),
         displayMedium: Theme.of(context).textTheme.displayMedium?.copyWith(
               fontWeight: FontWeight.bold,
+          fontFamily: "Tajawal-Regular",
+          color: lightColorScheme.background,
             ),
         displaySmall: Theme.of(context).textTheme.displaySmall?.copyWith(
               fontSize: FontSize.displaySmall,

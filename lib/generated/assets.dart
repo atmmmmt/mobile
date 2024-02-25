@@ -12,12 +12,15 @@ class Assets {
   static const String fontsTajawalMedium = 'assets/fonts/Tajawal-Medium.ttf';
   static const String fontsTajawalRegular = 'assets/fonts/Tajawal-Regular.ttf';
   static const String imagesAtmthaLogo = 'assets/images/atmtha_logo.png';
+  static const String imagesBackArrow = 'assets/images/back_arrow.png';
+  static const String imagesCalenderIcon = 'assets/images/calender_icon.png';
   static const String imagesChangPassBoy = 'assets/images/chang_pass_boy.svg';
   static const String imagesChangePass = 'assets/images/change_pass.svg';
   static const String imagesChangePassPlant = 'assets/images/change_pass_plant.svg';
   static const String imagesChangePassSvg = 'assets/images/change_pass_svg.svg';
   static const String imagesChangePasss = 'assets/images/change_passs.svg';
   static const String imagesChooseMajorIluustration = 'assets/images/choose_major_iluustration.svg';
+  static const String imagesCodeIcon = 'assets/images/code_icon.png';
   static const String imagesConfirmCode = 'assets/images/confirm_code.svg';
   static const String imagesConfirmCodeGirl = 'assets/images/confirm_code_girl.svg';
   static const String imagesConfirmPass = 'assets/images/confirm_pass.svg';
@@ -25,17 +28,26 @@ class Assets {
   static const String imagesCongratsIllustration = 'assets/images/congrats_illustration.svg';
   static const String imagesCongratsSvg = 'assets/images/congrats_svg.svg';
   static const String imagesCreateAccount = 'assets/images/create_account.svg';
+  static const String imagesDangerIcon = 'assets/images/danger_icon.png';
+  static const String imagesFavBoy = 'assets/images/fav_boy.svg';
   static const String imagesHandShake = 'assets/images/hand_shake.svg';
   static const String imagesHello = 'assets/images/hello.jpg';
+  static const String imagesLevelsBoy = 'assets/images/levels_boy.svg';
   static const String imagesLitertureGirl = 'assets/images/literture_girl.svg';
   static const String imagesLockIcon = 'assets/images/lock_icon.svg';
   static const String imagesLoginGirlStack = 'assets/images/login_girl_stack.svg';
+  static const String imagesMsgIcon = 'assets/images/msg_icon.png';
+  static const String imagesMycodesGirl = 'assets/images/mycodes_girl.svg';
+  static const String imagesNotificationIcon = 'assets/images/notification_icon.png';
+  static const String imagesPaymentIcon = 'assets/images/payment_icon.png';
   static const String imagesPlant = 'assets/images/plant.svg';
   static const String imagesQrCodeGirl = 'assets/images/qr_code_girl.svg';
   static const String imagesQrCodeIcon = 'assets/images/qr_code_icon.svg';
   static const String imagesQusetionMark = 'assets/images/qusetion_mark.svg';
   static const String imagesScienceBoy = 'assets/images/science_boy.svg';
+  static const String imagesSubjectListtileIcon = 'assets/images/subject_listtile_icon.png';
   static const String imagesSubscribeLeading = 'assets/images/subscribe_leading.svg';
   static const String imagesWlcLogin = 'assets/images/wlc_login.svg';
+  static const String widgetsWelcomename = 'lib/features/auth/presentation/widgets/welcomename.dart';
 
 }

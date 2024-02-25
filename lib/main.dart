@@ -4,9 +4,11 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/widgets/app_route.dart';
+import 'injection/injection.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
 
   runApp(const MyApp());
 }

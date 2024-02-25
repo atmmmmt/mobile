@@ -1,9 +1,13 @@
 import 'package:atmtha_mobile/core/app_theme/colors.dart';
 import 'package:atmtha_mobile/core/widgets/app_buttons.dart';
+import 'package:atmtha_mobile/features/auth/presentation/pages/change_password.dart';
+import 'package:atmtha_mobile/features/auth/presentation/pages/confirm_register.dart';
+import 'package:atmtha_mobile/features/auth/presentation/pages/sign_up.dart';
 import 'package:atmtha_mobile/features/auth/presentation/widgets/textfield_inputs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../resources/resources.dart';
 
@@ -60,12 +64,17 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               TextButton(
-                  onPressed: () {}, child: Text(" نسيت كلمة المرور ؟",style: Theme.of(context).textTheme.titleSmall)),
+                  onPressed: () {
+                    context.pushNamed(ChangePasswordScreen.name);
+                  }, child: Text(" نسيت كلمة المرور ؟",style: Theme.of(context).textTheme.titleSmall)),
               SizedBox(
                 height: 20.h,
               ),
                MainButton(
-                text: 'تسجيل الدخول', onPressed: () {  },
+                text: 'تسجيل الدخول', onPressed: () {
+                 context.pushNamed(ConfirmPassword.name);
+
+               },
               ),
               SizedBox(
                 height: 70.h,
@@ -75,14 +84,19 @@ class _SignInScreenState extends State<SignInScreen> {
                 children: [
                   SubButtonLight(
                     text: "تسجيل الدخول",
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(SignInScreen.name);
+
+                    },
                   ),
                   SizedBox(
                     width: 15.w,
                   ),
                   SubButtonDark(
                     text: "انشاء حساب",
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(SignUpScreen.name);
+                    },
                   ),
                 ],
               )

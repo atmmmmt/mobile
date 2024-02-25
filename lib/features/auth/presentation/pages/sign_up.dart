@@ -1,7 +1,8 @@
+import 'package:atmtha_mobile/features/auth/presentation/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:go_router/go_router.dart';
 import '../../../../core/app_theme/colors.dart';
 import '../../../../core/widgets/app_buttons.dart';
 import '../../../../resources/resources.dart';
@@ -9,6 +10,8 @@ import '../widgets/textfield_inputs.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
+  static String name = "home";
+  static String path = "/sign_up_screen";
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -77,7 +80,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               MainButtonInActive(
                 text: 'تسجيل الدخول',
-                onPressed: () {},
+                onPressed: () {
+                },
               ),
               SizedBox(
                 height: 70.h,
@@ -87,14 +91,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: [
                   SubButtonLight(
                     text: "تسجيل الدخول",
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(SignInScreen.name);
+
+                    },
                   ),
                   SizedBox(
                     width: 30.w,
                   ),
                   SubButtonDark(
                     text: "انشاء حساب",
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(SignUpScreen.name);
+
+                    },
                   ),
                 ],
               )

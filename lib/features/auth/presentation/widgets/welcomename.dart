@@ -23,6 +23,7 @@ final String text ;
                     "مرحبا بك",
                     style: Theme.of(context).textTheme.headlineMedium,
                   )),
+
               Positioned(
                   right: 200,
                   // left: 0,

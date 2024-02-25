@@ -1,4 +1,4 @@
-import 'package:atmtha_mobile/core/app_theme/listtile_card.dart';
+import 'package:atmtha_mobile/core/widgets/listtile_card.dart';
 import 'package:atmtha_mobile/core/widgets/app_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,6 +10,8 @@ import '../widgets/textfield_inputs.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);
+  static String name = "change_password_screen";
+  static String path = "/change_password_screen";
 
   @override
   State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
@@ -33,28 +35,42 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       height: 290.h,
                       width: 302.w,
                     )),
-                Text(
-                    "حدد تفاصيل الاتصال التي تفضل أن نرسل\n إليك عن طريقها التفاصيل...",
+                Text("حدد تفاصيل الاتصال التي تفضل أن نرسل ",
                     style: Theme.of(context).textTheme.titleMedium),
+                SizedBox(
+                  height: 5.h,
+                ),
+                Text(
+                  "إليك عن طريقها التفاصيل..",
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
                 SizedBox(
                   height: 15.h,
                 ),
                 Container(
                     alignment: Alignment.center,
                     width: 390.w,
-                    height: 152.h,
+                    height: 180.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
-                      border: Border.all(
-                          width: 2,
-                          color: lightColorScheme.outline),
+                      border:
+                          Border.all(width: 2, color: lightColorScheme.outline),
                     ),
-
-                  child: ChangePassListTile(tittle: "tittle", subtitle: "subtitle", icon: Icons.email_outlined)
-                    ),
-
-
-
+                    child: const Column(
+                      children: [
+                        ChangePassListTile(
+                            tittle: "ايميل",
+                            subtitle: "ارسال الى الايميل",
+                            image: Images.msgIcon),
+                        Divider(
+                          thickness: 2.0,
+                        ),
+                        ChangePassListTile(
+                            tittle: "رقم الهاتف",
+                            subtitle: "ارسال الى رقم الهاتف",
+                            image: Images.msgIcon),
+                      ],
+                    )),
                 SizedBox(
                   height: 70.h,
                 ),
@@ -79,7 +95,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                 Row(
                   children: [
                     Container(
-                        margin: REdgeInsets.only(right: 120,top: 145),
+                        margin: REdgeInsets.only(right: 120, top: 145),
                         child: SvgPicture.asset(
                           Images.changePassPlant,
                           width: 23.w,

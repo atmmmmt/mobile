@@ -2,6 +2,7 @@ import 'package:atmtha_mobile/core/widgets/app_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/app_theme/colors.dart';
 import '../../../../resources/resources.dart';
@@ -9,7 +10,8 @@ import '../widgets/textfield_inputs.dart';
 
 class ActivateCode extends StatefulWidget {
   const ActivateCode({Key? key}) : super(key: key);
-
+  static String name = "activate_code";
+  static String path = "/activate_code";
   @override
   State<ActivateCode> createState() => _ActivateCodeState();
 }
@@ -52,7 +54,8 @@ class _ActivateCodeState extends State<ActivateCode> {
 
         ),
               SizedBox(height: 50.h,),
-              MainButtonInActive(text: "استمرار", onPressed:(){}),
+              MainButtonInActive(text: "استمرار", onPressed:(){
+              }),
               SizedBox(height: 40.h,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

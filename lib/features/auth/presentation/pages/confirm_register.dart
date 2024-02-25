@@ -1,14 +1,18 @@
 import 'package:atmtha_mobile/core/widgets/app_buttons.dart';
+import 'package:atmtha_mobile/features/auth/presentation/pages/congrats_register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/app_theme/colors.dart';
 import '../../../../resources/resources.dart';
 
 class ConfirmPassword extends StatefulWidget {
   const ConfirmPassword({Key? key}) : super(key: key);
+  static String name = "confirm_password";
+  static String path = "/confirm_password";
 
   @override
   State<ConfirmPassword> createState() => _ConfirmPasswordState();
@@ -95,7 +99,10 @@ class _ConfirmPasswordState extends State<ConfirmPassword> {
               ),
               MainButton(
                 text: "استمرار",
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(CongratsScreen.name);
+
+                },
               ),
               Container(
                   margin: REdgeInsets.only(right: 120, top: 80),
