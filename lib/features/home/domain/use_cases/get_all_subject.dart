@@ -6,9 +6,8 @@ import 'package:dartz/dartz.dart';
 
 class GetAllSubjectUseCase{
   final RepoGetSubject repo;
-
   GetAllSubjectUseCase(this.repo);
-  Future<Either<Failure,List<GetSubjectEntities>>> call()async{
+  Future<Either<Failure,List<GetSubjectEntities>>> call()async {
     return await repo.getAllSubject();
   }
 
