@@ -1,11 +1,14 @@
 
+
 import 'package:atmtha_mobile/core/error/exceptions.dart';
 import 'package:atmtha_mobile/features/get_subject/data_layer/model/get_all_subject_model.dart';
 import 'package:dartz/dartz.dart';
+
+
 import '../../../../core/error/failure.dart';
 import '../../../../network/networkinfo.dart';
-import '../../domain/entites/get_subject_entites.dart';
-import '../../domain/repo/get_subject-repo.dart';
+import '../../../get_subject/domain/entites/get_subject_entites.dart';
+import '../../../get_subject/domain/repo/get_subject-repo.dart';
 import '../data_sources/local_data_source.dart';
 import '../../../home/data/data_sources/remote_data_source.dart';
 
