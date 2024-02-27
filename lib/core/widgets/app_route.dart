@@ -19,7 +19,7 @@ import 'package:go_router/go_router.dart';
       GoRoute(
        path: SignUpScreen.path,
        name: SignUpScreen.name,
-       builder: (context, state)=> QuizLevels(),
+       builder: (context, state)=> SignUpScreen(),
       ),
        GoRoute(
          path: SignInScreen.path,

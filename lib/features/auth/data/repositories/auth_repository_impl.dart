@@ -2,6 +2,8 @@ import 'package:atmtha_mobile/core/errors/app_exceptions.dart';
 import 'package:atmtha_mobile/core/errors/failuer.dart';
 import 'package:atmtha_mobile/features/auth/data/data_sources/local_data_source.dart';
 import 'package:atmtha_mobile/features/auth/domain/repositories/auth_repository.dart';
+import 'package:atmtha_mobile/features/auth/domain/use_cases/sign_in.dart';
+import 'package:atmtha_mobile/features/auth/domain/use_cases/sign_up.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../../core/network/network.dart';
@@ -11,7 +13,7 @@ typedef Future<String> SignInOrSignUpOrSignOut(params);
 
 
 class IAuthRepository implements AuthRepository {
-  final AuthRemoteDataSource authRemoteDataSource;
+  final AuthRemoteDataSource  authRemoteDataSource;
   final AuthLocalDataSource authLocalDataSource;
   final NetworkInfo networkInfo;
 
@@ -23,14 +25,14 @@ class IAuthRepository implements AuthRepository {
   @override
   Future<Either<Failure, String>> signIn(signInParams) async {
     return await _getMessage((params) {
-      return authRemoteDataSource.signIn();
+      return authRemoteDataSource.signIn(signInParams);
     });
   }
 
   @override
   Future<Either<Failure, String>> signOut() async {
     return await _getMessage((params) {
-      return authRemoteDataSource.signIn();
+      return authRemoteDataSource.signOut();
     });
   }
 
@@ -38,7 +40,7 @@ class IAuthRepository implements AuthRepository {
   Future<Either<Failure, String>> signUp(signUpParams) async {
     return await _getMessage((params) {
       authLocalDataSource.saveToken("token");
-      return authRemoteDataSource.signUp();
+      return authRemoteDataSource.signUp(signUpParams);
     });
   }
 
